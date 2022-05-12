@@ -1,0 +1,191 @@
+/* -----CSS Reset---------*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -----------memSlider------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(https://images.pexels.com/photos/259915/pexels-photo-259915.jpeg?cs=srgb&dl=pexels-pixabay-259915.jpg&fm=jpg);
+}
+
+.wrapper_box {
+	position: relative;
+	width: 1400px;
+	height: 700px;
+	margin: 200px auto 0;
+	
+	
+}
+
+.slider {
+	background-color: white;
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	width: inherit;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+/*.wrapper_box>input {
+	display: none;
+}*/
+
+.slides {
+	height: inherit;
+	position: absolute;
+	width: inherit;
+}
+.slide_1 {
+	background-image: url(./assets/portfolio-1.jpg);
+}
+.slide_2 {
+	background-image: url(./assets/portfolio-2.jpg);
+}
+.slide_3 {
+	background-image: url(./assets/portfolio-3.jpg);
+}
+.slide_4 {
+	background-image: url(./assets/portfolio-4.jpg);
+}
+.slide_5 {
+	background-image: url(./assets/portfolio-5.jpg);
+}
+.slide_6 {
+	background-image: url(./assets/portfolio-6.jpg);
+}
+
+
+
