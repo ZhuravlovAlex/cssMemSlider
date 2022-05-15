@@ -138,14 +138,22 @@ table {
 }
 
 body {
+	
+}
+
+.background {
+	width: 1920px;
+	height: 1080px;
+	margin: 0 auto;
 	background-image: url(https://images.pexels.com/photos/259915/pexels-photo-259915.jpeg?cs=srgb&dl=pexels-pixabay-259915.jpg&fm=jpg);
 }
 
 .wrapper_box {
 	position: relative;
-	width: 1400px;
-	height: 700px;
+	width: 600px;
+	height: 900px;
 	margin: 200px auto 0;
+	padding-top: 80px;
 	
 	
 }
@@ -156,20 +164,25 @@ body {
 	overflow: hidden;
 	position: relative;
 	width: inherit;
-	box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 30px rgba(0, 0, 0, .8);
+	border: 8px solid darkslategray;
+	border-radius: 20px;
 }
 
-/*.wrapper_box>input {
+.wrapper_box>input {
 	display: none;
-}*/
+}
 
 .slides {
 	height: inherit;
 	position: absolute;
 	width: inherit;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .slide_1 {
 	background-image: url(./assets/portfolio-1.jpg);
+	
 }
 .slide_2 {
 	background-image: url(./assets/portfolio-2.jpg);
@@ -186,6 +199,80 @@ body {
 .slide_6 {
 	background-image: url(./assets/portfolio-6.jpg);
 }
+
+
+.wrapper_box .controls {
+	position: absolute;
+	margin-left: -98px;
+	left: 50%;
+}
+
+.wrapper_box label {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	margin: 25px 12px 0 16px;
+}
+
+.wrapper_box label:after {
+	position: absolute;
+	display: block;
+	width: 12px;
+	height: 12px;
+	border: 2px solid white;
+	border-radius: 50%;
+	top: -4px;
+	left: -4px;
+	content: " "
+}
+
+/*--------------Swich slides---------------*/
+
+.wrapper_box label {
+	position: relative;
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	cursor: pointer;
+	border-radius: 50%;
+	transition: background ease-in-out .5s;
+}
+
+.wrapper_box label:hover,
+#slide_1:checked ~ .controls label:nth-of-type(1),
+#slide_2:checked ~ .controls label:nth-of-type(2), 
+#slide_3:checked ~ .controls label:nth-of-type(3),
+#slide_4:checked ~ .controls label:nth-of-type(4),
+#slide_5:checked ~ .controls label:nth-of-type(5),
+#slide_6:checked ~ .controls label:nth-of-type(6) {
+	background: #ddd;
+}
+
+.slides {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	z-index: 0;
+	opacity: 0;
+	transform: scale(1.5);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+
+#slide_1:checked~.slider>.slide_1,
+#slide_2:checked~.slider>.slide_2,
+#slide_3:checked~.slider>.slide_3,
+#slide_4:checked~.slider>.slide_4,
+#slide_5:checked~.slider>.slide_5,
+#slide_6:checked~.slider>.slide_6 {
+	z-index: 1;
+	opacity: 1;
+	transform: scale(1);
+}
+
 
 
 
